@@ -6,13 +6,17 @@
 <title>Iron Word — The Bible App for Men</title>
 <meta name="description" content="Daily verses for work, family, leadership and temptation, right on your lock screen. No ads. No noise.">
 <style>
-:root{--ink:#1d1a16;--muted:#5d564c;--bg:#faf7f2;--card:#fff;--accent:#7a4b1f;--line:#e7dfd3}
+:root{--ink:#1d1a16;--muted:#5d564c;--bg:#faf7f2;--card:#fff;--accent:#c8873a;--line:#e7dfd3}
 *{box-sizing:border-box}body{margin:0;font:17px/1.55 Georgia,"Times New Roman",serif;color:var(--ink);background:var(--bg)}
 .wrap{max-width:720px;margin:0 auto;padding:28px 16px 48px}
 .brand{font:600 15px/1 -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 .tag{font:14px -apple-system,Segoe UI,Roboto,sans-serif;color:var(--muted);margin-top:6px}
 h1{font-size:clamp(28px,6vw,40px);line-height:1.15;margin:28px 0 12px}
 .sub{font-size:19px;color:var(--muted);margin:0 0 28px}
+.hero{display:grid;gap:8px;align-items:center}.hero>*{min-width:0}
+@media(min-width:760px){.hero{grid-template-columns:1.15fr .85fr;gap:28px}.wrap{max-width:980px}}
+figure{margin:0 0 24px}.hero-art{width:100%;max-width:260px;display:block;margin:0 auto;filter:drop-shadow(0 18px 30px rgba(0,0,0,.18))}
+figcaption{text-align:center;font:13px -apple-system,Segoe UI,Roboto,sans-serif;color:var(--muted);margin-top:8px}
 .feats{display:grid;gap:12px;margin:0 0 28px;padding:0;list-style:none}
 .feats li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
 .feats b{display:block;font:600 16px -apple-system,Segoe UI,Roboto,sans-serif;margin-bottom:4px}
@@ -31,8 +35,24 @@ footer{font-size:13px;color:var(--muted);margin-top:36px}
 <main class="wrap">
   <div class="brand">Iron Word</div>
   <div class="tag">The Bible app built for men</div>
-  <h1>Five minutes a day. Scripture that speaks to the man you're becoming.</h1>
-  <p class="sub">Daily verses for work, family, leadership and temptation, right on your lock screen. No ads. No noise.</p>
+  <div class="hero">
+    <div><h1>Five minutes a day. Scripture that speaks to the man you're becoming.</h1>
+    <p class="sub">Daily verses for work, family, leadership and temptation, right on your lock screen. No ads. No noise.</p></div>
+    <figure><svg class="hero-art" viewBox="0 0 300 610" role="img" aria-label="Preview: daily verse widget on an iPhone lock screen">
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2430"/><stop offset="1" stop-color="#c8873a" stop-opacity=".35"/></linearGradient>
+  <clipPath id="scr"><rect x="10" y="10" width="280" height="590" rx="38"/></clipPath></defs>
+  <rect x="0" y="0" width="300" height="610" rx="46" fill="#0c0c0d"/>
+  <g clip-path="url(#scr)"><rect x="10" y="10" width="280" height="590" fill="url(#sky)"/>
+    <g transform="translate(-60 250) scale(1)"><circle cx="250" cy="150" r="46" fill="#c8873a" opacity=".9"/><path d="M0 260 L90 170 L150 215 L230 120 L320 210 L380 160 L420 200 L420 420 L0 420Z" fill="#2a3442"/><path d="M0 320 L70 260 L160 300 L250 230 L340 300 L420 250 L420 420 L0 420Z" fill="#1d252f"/></g>
+    <rect x="115" y="22" width="70" height="20" rx="10" fill="#0c0c0d"/>
+    <text x="150" y="86" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="14" fill="#fff" opacity=".9">Tuesday, November 4</text>
+    <text x="150" y="150" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="62" font-weight="600" fill="#fff">7:02</text>
+    <rect x="20" y="318" width="260" height="135" rx="20" fill="#ffffff" opacity=".94"/>
+    <text x="34" y="344" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="#c8873a">IRON WORD</text>
+    <text y="368" font-family="Georgia,serif" font-size="16" fill="#1d1a16"><tspan x="34" dy="0">Iron sharpeneth iron; so a man</tspan><tspan x="34" dy="21">sharpeneth the countenance of</tspan><tspan x="34" dy="21">his friend.</tspan></text>
+    <text x="34" y="433" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" font-weight="600" fill="#6b645a">Proverbs 27:17</text>
+  </g></svg><figcaption>App preview</figcaption></figure>
+  </div>
   <ul class="feats">
     <li><b>Daily verse on your lock screen</b><span>A widget that puts one strong verse in front of you every morning, before the inbox does.</span></li>
     <li><b>Built for men's real battles</b><span>Verse paths for discipline, anger, fatherhood, marriage, work and purpose.</span></li>

@@ -6,13 +6,17 @@
 <title>Palabra Diaria — Biblia Reina-Valera en tu pantalla</title>
 <meta name="description" content="La Biblia Reina-Valera en widgets, versículos diarios y lectura que se desliza como tus redes. Sin anuncios.">
 <style>
-:root{--ink:#1d1a16;--muted:#5d564c;--bg:#faf7f2;--card:#fff;--accent:#7a4b1f;--line:#e7dfd3}
+:root{--ink:#1d1a16;--muted:#5d564c;--bg:#faf7f2;--card:#fff;--accent:#a8452c;--line:#e7dfd3}
 *{box-sizing:border-box}body{margin:0;font:17px/1.55 Georgia,"Times New Roman",serif;color:var(--ink);background:var(--bg)}
 .wrap{max-width:720px;margin:0 auto;padding:28px 16px 48px}
 .brand{font:600 15px/1 -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 .tag{font:14px -apple-system,Segoe UI,Roboto,sans-serif;color:var(--muted);margin-top:6px}
 h1{font-size:clamp(28px,6vw,40px);line-height:1.15;margin:28px 0 12px}
 .sub{font-size:19px;color:var(--muted);margin:0 0 28px}
+.hero{display:grid;gap:8px;align-items:center}.hero>*{min-width:0}
+@media(min-width:760px){.hero{grid-template-columns:1.15fr .85fr;gap:28px}.wrap{max-width:980px}}
+figure{margin:0 0 24px}.hero-art{width:100%;max-width:260px;display:block;margin:0 auto;filter:drop-shadow(0 18px 30px rgba(0,0,0,.18))}
+figcaption{text-align:center;font:13px -apple-system,Segoe UI,Roboto,sans-serif;color:var(--muted);margin-top:8px}
 .feats{display:grid;gap:12px;margin:0 0 28px;padding:0;list-style:none}
 .feats li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
 .feats b{display:block;font:600 16px -apple-system,Segoe UI,Roboto,sans-serif;margin-bottom:4px}
@@ -31,8 +35,24 @@ footer{font-size:13px;color:var(--muted);margin-top:36px}
 <main class="wrap">
   <div class="brand">Palabra Diaria</div>
   <div class="tag">La Biblia en español, hecha para tu día</div>
-  <h1>Un versículo cada mañana, en tu idioma, en tu pantalla de bloqueo.</h1>
-  <p class="sub">La Biblia Reina-Valera en widgets, versículos diarios y lectura que se desliza como tus redes. Sin anuncios.</p>
+  <div class="hero">
+    <div><h1>Un versículo cada mañana, en tu idioma, en tu pantalla de bloqueo.</h1>
+    <p class="sub">La Biblia Reina-Valera en widgets, versículos diarios y lectura que se desliza como tus redes. Sin anuncios.</p></div>
+    <figure><svg class="hero-art" viewBox="0 0 300 610" role="img" aria-label="Preview: daily verse widget on an iPhone lock screen">
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6d7b0"/><stop offset="1" stop-color="#a8452c" stop-opacity=".35"/></linearGradient>
+  <clipPath id="scr"><rect x="10" y="10" width="280" height="590" rx="38"/></clipPath></defs>
+  <rect x="0" y="0" width="300" height="610" rx="46" fill="#0c0c0d"/>
+  <g clip-path="url(#scr)"><rect x="10" y="10" width="280" height="590" fill="url(#sky)"/>
+    <g transform="translate(-60 250) scale(1)"><circle cx="210" cy="250" r="80" fill="#a8452c" opacity=".85"/><path d="M0 270 Q110 220 210 265 T420 255 L420 420 L0 420Z" fill="#e9b98a"/><path d="M0 320 Q140 280 260 315 T420 300 L420 420 L0 420Z" fill="#d79a6a"/></g>
+    <rect x="115" y="22" width="70" height="20" rx="10" fill="#0c0c0d"/>
+    <text x="150" y="86" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="14" fill="#fff" opacity=".9">martes, 4 de noviembre</text>
+    <text x="150" y="150" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="62" font-weight="600" fill="#fff">7:02</text>
+    <rect x="20" y="318" width="260" height="114" rx="20" fill="#ffffff" opacity=".94"/>
+    <text x="34" y="344" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="#a8452c">PALABRA DIARIA</text>
+    <text y="368" font-family="Georgia,serif" font-size="16" fill="#1d1a16"><tspan x="34" dy="0">Todo lo puedo en Cristo que me</tspan><tspan x="34" dy="21">fortalece.</tspan></text>
+    <text x="34" y="412" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" font-weight="600" fill="#6b645a">Filipenses 4:13</text>
+  </g></svg><figcaption>Vista previa de la app</figcaption></figure>
+  </div>
   <ul class="feats">
     <li><b>Versículo diario en tu pantalla</b><span>Un widget con un versículo nuevo cada día, antes que cualquier notificación.</span></li>
     <li><b>En español, de verdad</b><span>Toda la app en español, con la Reina-Valera completa.</span></li>
