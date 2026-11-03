@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iron Word — The Bible App for Men</title>
+<meta name="description" content="Daily verses for work, family, leadership and temptation, right on your lock screen. No ads. No noise.">
+<style>
+:root{--ink:#1d1a16;--muted:#5d564c;--bg:#faf7f2;--card:#fff;--accent:#7a4b1f;--line:#e7dfd3}
+*{box-sizing:border-box}body{margin:0;font:17px/1.55 Georgia,"Times New Roman",serif;color:var(--ink);background:var(--bg)}
+.wrap{max-width:720px;margin:0 auto;padding:28px 16px 48px}
+.brand{font:600 15px/1 -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.tag{font:14px -apple-system,Segoe UI,Roboto,sans-serif;color:var(--muted);margin-top:6px}
+h1{font-size:clamp(28px,6vw,40px);line-height:1.15;margin:28px 0 12px}
+.sub{font-size:19px;color:var(--muted);margin:0 0 28px}
+.feats{display:grid;gap:12px;margin:0 0 28px;padding:0;list-style:none}
+.feats li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.feats b{display:block;font:600 16px -apple-system,Segoe UI,Roboto,sans-serif;margin-bottom:4px}
+.feats span{font-size:15px;color:var(--muted)}
+.offer{background:var(--card);border:2px solid var(--accent);border-radius:14px;padding:20px 18px}
+.price{font:700 30px -apple-system,Segoe UI,Roboto,sans-serif}
+.pnote{font-size:14px;color:var(--muted);margin:4px 0 16px}
+form{display:flex;gap:8px;flex-wrap:wrap}
+input[type=email]{flex:1 1 220px;min-width:0;font:16px -apple-system,Segoe UI,Roboto,sans-serif;padding:12px;border:1px solid var(--line);border-radius:10px}
+button{flex:0 0 auto;font:600 16px -apple-system,Segoe UI,Roboto,sans-serif;padding:12px 16px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer}
+.note{font-size:14px;color:var(--muted);margin-top:12px}
+footer{font-size:13px;color:var(--muted);margin-top:36px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="brand">Iron Word</div>
+  <div class="tag">The Bible app built for men</div>
+  <h1>Five minutes a day. Scripture that speaks to the man you're becoming.</h1>
+  <p class="sub">Daily verses for work, family, leadership and temptation, right on your lock screen. No ads. No noise.</p>
+  <ul class="feats">
+    <li><b>Daily verse on your lock screen</b><span>A widget that puts one strong verse in front of you every morning, before the inbox does.</span></li>
+    <li><b>Built for men's real battles</b><span>Verse paths for discipline, anger, fatherhood, marriage, work and purpose.</span></li>
+    <li><b>Scroll scripture, not feeds</b><span>Swipe through verses instead of social media. Same thumb, better input.</span></li>
+    <li><b>Zero ads, ever</b><span>Your quiet time is not inventory. No ads, no tracking for advertisers.</span></li>
+  </ul>
+  <section class="offer" id="reserve">
+    <div class="price">$39.99 / year</div>
+    <div class="pnote">Launch price for people on the list. Cancel anytime. The full King James Version is included.</div>
+    <form action="FORM_ENDPOINT" method="POST">
+      <input type="email" name="email" required placeholder="Your email" aria-label="Your email">
+      <input type="hidden" name="audience" value="men">
+      <input type="hidden" name="utm_source" id="utm_source" value="direct">
+      <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
+      <button type="submit">Reserve my launch price</button>
+    </form>
+    <p class="note">Iron Word is launching soon. Join the list and we'll email you once, when it's live in the App Store.</p>
+  </section>
+  <footer>Scripture quotations from the King James Version (public domain in the United States).</footer>
+</main>
+<script>
+(function(){var p=new URLSearchParams(location.search);
+["utm_source","utm_campaign"].forEach(function(k){var v=p.get(k);if(v)document.getElementById(k).value=v.slice(0,40);});
+// Until a form service is connected, keep the page honest instead of posting to a dead endpoint.
+var f=document.querySelector("form");if(f.getAttribute("action")==="FORM_ENDPOINT")f.addEventListener("submit",function(e){e.preventDefault();
+document.querySelector(".note").textContent="The list opens in a few days. Please check back soon.";});})();
+</script>
+</body>
+</html>

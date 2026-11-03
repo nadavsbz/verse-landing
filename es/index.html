@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Palabra Diaria — Biblia Reina-Valera en tu pantalla</title>
+<meta name="description" content="La Biblia Reina-Valera en widgets, versículos diarios y lectura que se desliza como tus redes. Sin anuncios.">
+<style>
+:root{--ink:#1d1a16;--muted:#5d564c;--bg:#faf7f2;--card:#fff;--accent:#7a4b1f;--line:#e7dfd3}
+*{box-sizing:border-box}body{margin:0;font:17px/1.55 Georgia,"Times New Roman",serif;color:var(--ink);background:var(--bg)}
+.wrap{max-width:720px;margin:0 auto;padding:28px 16px 48px}
+.brand{font:600 15px/1 -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.tag{font:14px -apple-system,Segoe UI,Roboto,sans-serif;color:var(--muted);margin-top:6px}
+h1{font-size:clamp(28px,6vw,40px);line-height:1.15;margin:28px 0 12px}
+.sub{font-size:19px;color:var(--muted);margin:0 0 28px}
+.feats{display:grid;gap:12px;margin:0 0 28px;padding:0;list-style:none}
+.feats li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.feats b{display:block;font:600 16px -apple-system,Segoe UI,Roboto,sans-serif;margin-bottom:4px}
+.feats span{font-size:15px;color:var(--muted)}
+.offer{background:var(--card);border:2px solid var(--accent);border-radius:14px;padding:20px 18px}
+.price{font:700 30px -apple-system,Segoe UI,Roboto,sans-serif}
+.pnote{font-size:14px;color:var(--muted);margin:4px 0 16px}
+form{display:flex;gap:8px;flex-wrap:wrap}
+input[type=email]{flex:1 1 220px;min-width:0;font:16px -apple-system,Segoe UI,Roboto,sans-serif;padding:12px;border:1px solid var(--line);border-radius:10px}
+button{flex:0 0 auto;font:600 16px -apple-system,Segoe UI,Roboto,sans-serif;padding:12px 16px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer}
+.note{font-size:14px;color:var(--muted);margin-top:12px}
+footer{font-size:13px;color:var(--muted);margin-top:36px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="brand">Palabra Diaria</div>
+  <div class="tag">La Biblia en español, hecha para tu día</div>
+  <h1>Un versículo cada mañana, en tu idioma, en tu pantalla de bloqueo.</h1>
+  <p class="sub">La Biblia Reina-Valera en widgets, versículos diarios y lectura que se desliza como tus redes. Sin anuncios.</p>
+  <ul class="feats">
+    <li><b>Versículo diario en tu pantalla</b><span>Un widget con un versículo nuevo cada día, antes que cualquier notificación.</span></li>
+    <li><b>En español, de verdad</b><span>Toda la app en español, con la Reina-Valera completa.</span></li>
+    <li><b>Desliza la Palabra</b><span>Lee versículos deslizando, como en tus redes, pero llenando tu corazón.</span></li>
+    <li><b>Sin anuncios, nunca</b><span>Tu tiempo con Dios no se interrumpe con publicidad.</span></li>
+  </ul>
+  <section class="offer" id="reserve">
+    <div class="price">$39.99 / año</div>
+    <div class="pnote">Precio de lanzamiento para quienes se anoten. Cancela cuando quieras.</div>
+    <form action="FORM_ENDPOINT" method="POST">
+      <input type="email" name="email" required placeholder="Tu correo" aria-label="Tu correo">
+      <input type="hidden" name="audience" value="es">
+      <input type="hidden" name="utm_source" id="utm_source" value="direct">
+      <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
+      <button type="submit">Reservar mi precio de lanzamiento</button>
+    </form>
+    <p class="note">Palabra Diaria saldrá muy pronto. Anótate y te escribiremos una sola vez, cuando esté en el App Store.</p>
+  </section>
+  <footer>Textos bíblicos de la Reina-Valera 1909 (dominio público).</footer>
+</main>
+<script>
+(function(){var p=new URLSearchParams(location.search);
+["utm_source","utm_campaign"].forEach(function(k){var v=p.get(k);if(v)document.getElementById(k).value=v.slice(0,40);});
+// Until a form service is connected, keep the page honest instead of posting to a dead endpoint.
+var f=document.querySelector("form");if(f.getAttribute("action")==="FORM_ENDPOINT")f.addEventListener("submit",function(e){e.preventDefault();
+document.querySelector(".note").textContent="La lista abre en unos días. Vuelve pronto, por favor.";});})();
+</script>
+</body>
+</html>
